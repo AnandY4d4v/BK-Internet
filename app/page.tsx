@@ -3,11 +3,12 @@
  * @see https://v0.dev/t/GhF7MNcnqvU
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+import Link from "next/link";
+import Image from "next/image"; // Added Next.js image component
+import { Button } from "@/components/ui/button";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 
 
@@ -161,11 +162,11 @@ export default function Component() {
               </p>
               <p className="text-muted-foreground text-lg md:text-xl">
                 Our mission is to empower our customers with the connectivity they need to thrive in the digital age.
-                Whether you're streaming, gaming, or working from home, we've got you covered.
+                Whether you&apos;re streaming, gaming, or working from home, we&apos;ve got you covered.
               </p>
             </div>
             <div>
-              <img
+              <Image
                 src="https://i.postimg.cc/RVDCTQR5/Designer.jpg"
                 alt="About Bharat Internet"
                 width={600}
@@ -207,64 +208,22 @@ export default function Component() {
   )
 }
 
-function ArrowRightIcon({ width = 24, height = 24, stroke = "currentColor", strokeWidth = 2, ...props }) {
+function ArrowRightIcon({...props}) {
   return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width={width}
-      height={height}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke={stroke}
-      strokeWidth={strokeWidth}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
       <path d="M5 12h14" />
       <path d="m12 5 7 7-7 7" />
     </svg>
-  )
+  );
 }
 
-function WifiIcon({ width = 24, height = 24, stroke = "currentColor", strokeWidth = 2, ...props }) {
+function WifiIcon({...props}) {
   return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width={width}
-      height={height}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke={stroke}
-      strokeWidth={strokeWidth}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
       <path d="M12 20h.01" />
       <path d="M2 8.82a15 15 0 0 1 20 0" />
       <path d="M5 12.859a10 10 0 0 1 14 0" />
       <path d="M8.5 16.429a5 5 0 0 1 7 0" />
-    </svg>
-  )
-}
-function WalletCardsIcon({ width = 24, height = 24, stroke = "currentColor", strokeWidth = 2, ...props }) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width={width}
-      height={height}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke={stroke}
-      strokeWidth={strokeWidth}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      {...props}
-    >
-      <rect width="18" height="18" x="3" y="3" rx="2" />
-      <path d="M3 9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2" />
-      <path d="M3 11h3c.8 0 1.6.3 2.1.9l1.1.9c1.6 1.6 4.1 1.6 5.7 0l1.1-.9c.5-.5 1.3-.9 2.1-.9H21" />
     </svg>
   );
 }
